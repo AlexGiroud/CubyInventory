@@ -58,7 +58,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
       'LoopBackResource', 'LoopBackAuth', '$injector', '$q',
       function(LoopBackResource, LoopBackAuth, $injector, $q) {
         var R = LoopBackResource(
-        urlBase + "/users/:id",
+        urlBase + "/Users/:id",
           { 'id': '@id' },
           {
 
@@ -67,7 +67,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/users/:id/accessTokens/:fk",
+              url: urlBase + "/Users/:id/accessTokens/:fk",
               method: "GET",
             },
 
@@ -76,7 +76,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/users/:id/accessTokens/:fk",
+              url: urlBase + "/Users/:id/accessTokens/:fk",
               method: "DELETE",
             },
 
@@ -85,32 +85,32 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/users/:id/accessTokens/:fk",
+              url: urlBase + "/Users/:id/accessTokens/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use User.accessTokens() instead.
             "prototype$__get__accessTokens": {
               isArray: true,
-              url: urlBase + "/users/:id/accessTokens",
+              url: urlBase + "/Users/:id/accessTokens",
               method: "GET",
             },
 
             // INTERNAL. Use User.accessTokens.create() instead.
             "prototype$__create__accessTokens": {
-              url: urlBase + "/users/:id/accessTokens",
+              url: urlBase + "/Users/:id/accessTokens",
               method: "POST",
             },
 
             // INTERNAL. Use User.accessTokens.destroyAll() instead.
             "prototype$__delete__accessTokens": {
-              url: urlBase + "/users/:id/accessTokens",
+              url: urlBase + "/Users/:id/accessTokens",
               method: "DELETE",
             },
 
             // INTERNAL. Use User.accessTokens.count() instead.
             "prototype$__count__accessTokens": {
-              url: urlBase + "/users/:id/accessTokens/count",
+              url: urlBase + "/Users/:id/accessTokens/count",
               method: "GET",
             },
 
@@ -150,7 +150,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "create": {
-              url: urlBase + "/users",
+              url: urlBase + "/Users",
               method: "POST",
             },
 
@@ -191,7 +191,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "createMany": {
               isArray: true,
-              url: urlBase + "/users",
+              url: urlBase + "/Users",
               method: "POST",
             },
 
@@ -226,7 +226,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "patchOrCreate": {
-              url: urlBase + "/users",
+              url: urlBase + "/Users",
               method: "PATCH",
             },
 
@@ -266,7 +266,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "replaceOrCreate": {
-              url: urlBase + "/users/replaceOrCreate",
+              url: urlBase + "/Users/replaceOrCreate",
               method: "POST",
             },
 
@@ -305,7 +305,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "upsertWithWhere": {
-              url: urlBase + "/users/upsertWithWhere",
+              url: urlBase + "/Users/upsertWithWhere",
               method: "POST",
             },
 
@@ -339,7 +339,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `exists` – `{boolean=}` -
              */
             "exists": {
-              url: urlBase + "/users/:id/exists",
+              url: urlBase + "/Users/:id/exists",
               method: "GET",
             },
 
@@ -376,7 +376,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findById": {
-              url: urlBase + "/users/:id",
+              url: urlBase + "/Users/:id",
               method: "GET",
             },
 
@@ -415,7 +415,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "replaceById": {
-              url: urlBase + "/users/:id/replace",
+              url: urlBase + "/Users/:id/replace",
               method: "POST",
             },
 
@@ -451,7 +451,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "find": {
               isArray: true,
-              url: urlBase + "/users",
+              url: urlBase + "/Users",
               method: "GET",
             },
 
@@ -486,7 +486,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findOne": {
-              url: urlBase + "/users/findOne",
+              url: urlBase + "/Users/findOne",
               method: "GET",
             },
 
@@ -522,7 +522,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * Information related to the outcome of the operation
              */
             "updateAll": {
-              url: urlBase + "/users/update",
+              url: urlBase + "/Users/update",
               method: "POST",
             },
 
@@ -557,7 +557,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "deleteById": {
-              url: urlBase + "/users/:id",
+              url: urlBase + "/Users/:id",
               method: "DELETE",
             },
 
@@ -591,7 +591,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
             "count": {
-              url: urlBase + "/users/count",
+              url: urlBase + "/Users/count",
               method: "GET",
             },
 
@@ -606,7 +606,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              *  - `options` – `{object=}` -
              *
@@ -630,7 +630,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "prototype$patchAttributes": {
-              url: urlBase + "/users/:id",
+              url: urlBase + "/Users/:id",
               method: "PATCH",
             },
 
@@ -667,7 +667,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `changes` – `{ReadableStream=}` -
              */
             "createChangeStream": {
-              url: urlBase + "/users/change-stream",
+              url: urlBase + "/Users/change-stream",
               method: "POST",
             },
 
@@ -723,7 +723,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
                   return response.resource;
                 },
               },
-              url: urlBase + "/users/login",
+              url: urlBase + "/Users/login",
               method: "POST",
             },
 
@@ -770,7 +770,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
                   return responseError.resource;
                 },
               },
-              url: urlBase + "/users/logout",
+              url: urlBase + "/Users/logout",
               method: "POST",
             },
 
@@ -804,7 +804,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This method returns no data.
              */
             "confirm": {
-              url: urlBase + "/users/confirm",
+              url: urlBase + "/Users/confirm",
               method: "GET",
             },
 
@@ -839,7 +839,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This method returns no data.
              */
             "resetPassword": {
-              url: urlBase + "/users/reset",
+              url: urlBase + "/Users/reset",
               method: "POST",
             },
 
@@ -880,7 +880,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This method returns no data.
              */
             "changePassword": {
-              url: urlBase + "/users/change-password",
+              url: urlBase + "/Users/change-password",
               method: "POST",
             },
 
@@ -911,7 +911,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   from the server.
              */
             'getCurrent': {
-              url: urlBase + "/users" + '/:id',
+              url: urlBase + "/Users" + '/:id',
               method: 'GET',
               params: {
                 id: function() {
@@ -1146,7 +1146,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              *  - `options` – `{object=}` -
              *
@@ -1245,11 +1245,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @description
              *
-             * Queries accessTokens of user.
+             * Queries accessTokens of User.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              *  - `options` – `{object=}` -
              *
@@ -1285,11 +1285,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @description
              *
-             * Counts accessTokens of user.
+             * Counts accessTokens of User.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              *  - `options` – `{object=}` -
              *
@@ -1328,7 +1328,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              * @param {Object} postData Request data.
              *
@@ -1370,7 +1370,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              * @param {Object} postData Request data.
              *
@@ -1412,7 +1412,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              *  - `options` – `{object=}` -
              *
@@ -1449,7 +1449,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              *  - `options` – `{object=}` -
              *
@@ -1486,7 +1486,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              *  - `options` – `{object=}` -
              *
@@ -1526,7 +1526,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - user id
+             *  - `id` – `{*}` - User id
              *
              *  - `fk` – `{*}` - Foreign key for accessTokens
              *
@@ -2158,7 +2158,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/users/:id/accessTokens/:fk",
+              url: urlBase + "/Users/:id/accessTokens/:fk",
               method: "GET",
             },
 
@@ -2167,7 +2167,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/users/:id/accessTokens/:fk",
+              url: urlBase + "/Users/:id/accessTokens/:fk",
               method: "DELETE",
             },
 
@@ -2176,39 +2176,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/users/:id/accessTokens/:fk",
+              url: urlBase + "/Users/:id/accessTokens/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use User.accessTokens() instead.
             "::get::User::accessTokens": {
               isArray: true,
-              url: urlBase + "/users/:id/accessTokens",
+              url: urlBase + "/Users/:id/accessTokens",
               method: "GET",
             },
 
             // INTERNAL. Use User.accessTokens.create() instead.
             "::create::User::accessTokens": {
-              url: urlBase + "/users/:id/accessTokens",
+              url: urlBase + "/Users/:id/accessTokens",
               method: "POST",
             },
 
             // INTERNAL. Use User.accessTokens.createMany() instead.
             "::createMany::User::accessTokens": {
               isArray: true,
-              url: urlBase + "/users/:id/accessTokens",
+              url: urlBase + "/Users/:id/accessTokens",
               method: "POST",
             },
 
             // INTERNAL. Use User.accessTokens.destroyAll() instead.
             "::delete::User::accessTokens": {
-              url: urlBase + "/users/:id/accessTokens",
+              url: urlBase + "/Users/:id/accessTokens",
               method: "DELETE",
             },
 
             // INTERNAL. Use User.accessTokens.count() instead.
             "::count::User::accessTokens": {
-              url: urlBase + "/users/:id/accessTokens/count",
+              url: urlBase + "/Users/:id/accessTokens/count",
               method: "GET",
             },
           }
@@ -2531,6 +2531,85 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         urlBase + "/items/:id",
           { 'id': '@id' },
           {
+
+            // INTERNAL. Use Item.rents.findById() instead.
+            "prototype$__findById__rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use Item.rents.destroyById() instead.
+            "prototype$__destroyById__rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use Item.rents.updateById() instead.
+            "prototype$__updateById__rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use Item.rents.link() instead.
+            "prototype$__link__rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/rel/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use Item.rents.unlink() instead.
+            "prototype$__unlink__rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/rel/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use Item.rents.exists() instead.
+            "prototype$__exists__rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/rel/:fk",
+              method: "HEAD",
+            },
+
+            // INTERNAL. Use Item.rents() instead.
+            "prototype$__get__rents": {
+              isArray: true,
+              url: urlBase + "/items/:id/rents",
+              method: "GET",
+            },
+
+            // INTERNAL. Use Item.rents.create() instead.
+            "prototype$__create__rents": {
+              url: urlBase + "/items/:id/rents",
+              method: "POST",
+            },
+
+            // INTERNAL. Use Item.rents.destroyAll() instead.
+            "prototype$__delete__rents": {
+              url: urlBase + "/items/:id/rents",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use Item.rents.count() instead.
+            "prototype$__count__rents": {
+              url: urlBase + "/items/:id/rents/count",
+              method: "GET",
+            },
 
             /**
              * @ngdoc method
@@ -3396,6 +3475,462 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         */
         R.modelName = "Item";
 
+    /**
+     * @ngdoc object
+     * @name lbServices.Item.rents
+     * @header lbServices.Item.rents
+     * @object
+     * @description
+     *
+     * The object `Item.rents` groups methods
+     * manipulating `Rent` instances related to `Item`.
+     *
+     * Call {@link lbServices.Item#rents Item.rents()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item#rents
+             * @methodOf lbServices.Item
+             *
+             * @description
+             *
+             * Queries rents of item.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `filter` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Rent` object.)
+             * </em>
+             */
+        R.rents = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::get::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#count
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Counts rents of item.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.rents.count = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::count::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#create
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Creates a new instance in rents of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Rent` object.)
+             * </em>
+             */
+        R.rents.create = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::create::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#createMany
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Creates a new instance in rents of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Rent` object.)
+             * </em>
+             */
+        R.rents.createMany = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::createMany::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#destroyAll
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Deletes all rents of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `where` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.rents.destroyAll = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::delete::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#destroyById
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Delete a related item by id for rents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `fk` – `{*}` - Foreign key for rents
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.rents.destroyById = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::destroyById::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#exists
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Check the existence of rents relation to an item by id.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `fk` – `{*}` - Foreign key for rents
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Rent` object.)
+             * </em>
+             */
+        R.rents.exists = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::exists::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#findById
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Find a related item by id for rents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `fk` – `{*}` - Foreign key for rents
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Rent` object.)
+             * </em>
+             */
+        R.rents.findById = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::findById::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#link
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Add a related item by id for rents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             *  - `fk` – `{*}` - Foreign key for rents
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Rent` object.)
+             * </em>
+             */
+        R.rents.link = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::link::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#unlink
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Remove the rents relation to an item by id.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `fk` – `{*}` - Foreign key for rents
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.rents.unlink = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::unlink::Item::rents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Item.rents#updateById
+             * @methodOf lbServices.Item.rents
+             *
+             * @description
+             *
+             * Update a related item by id for rents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - item id
+             *
+             *  - `fk` – `{*}` - Foreign key for rents
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Rent` object.)
+             * </em>
+             */
+        R.rents.updateById = function() {
+          var TargetResource = $injector.get("Rent");
+          var action = TargetResource["::updateById::Item::rents"];
+          return action.apply(R, arguments);
+        };
 
 
         return R;
@@ -4041,6 +4576,92 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
             "createChangeStream": {
               url: urlBase + "/rents/change-stream",
               method: "POST",
+            },
+
+            // INTERNAL. Use Item.rents.findById() instead.
+            "::findById::Item::rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use Item.rents.destroyById() instead.
+            "::destroyById::Item::rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use Item.rents.updateById() instead.
+            "::updateById::Item::rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use Item.rents.link() instead.
+            "::link::Item::rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/rel/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use Item.rents.unlink() instead.
+            "::unlink::Item::rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/rel/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use Item.rents.exists() instead.
+            "::exists::Item::rents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/items/:id/rents/rel/:fk",
+              method: "HEAD",
+            },
+
+            // INTERNAL. Use Item.rents() instead.
+            "::get::Item::rents": {
+              isArray: true,
+              url: urlBase + "/items/:id/rents",
+              method: "GET",
+            },
+
+            // INTERNAL. Use Item.rents.create() instead.
+            "::create::Item::rents": {
+              url: urlBase + "/items/:id/rents",
+              method: "POST",
+            },
+
+            // INTERNAL. Use Item.rents.createMany() instead.
+            "::createMany::Item::rents": {
+              isArray: true,
+              url: urlBase + "/items/:id/rents",
+              method: "POST",
+            },
+
+            // INTERNAL. Use Item.rents.destroyAll() instead.
+            "::delete::Item::rents": {
+              url: urlBase + "/items/:id/rents",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use Item.rents.count() instead.
+            "::count::Item::rents": {
+              url: urlBase + "/items/:id/rents/count",
+              method: "GET",
             },
 
             // INTERNAL. Use Student.rents.findById() instead.

@@ -27,7 +27,7 @@
     "helmet#ieNoOpen": {},
     "helmet#noSniff": {},
     "helmet#noCache": {
-      "enabled": false
+      "enabled": true
     }
   },
   "session": {},
@@ -40,7 +40,11 @@
       ]
     }
   },
-  "files": {},
+  "files": {
+    "loopback#static": {
+      "params": "$!../client"
+    }
+  },
   "final": {
     "loopback#urlNotFound": {}
   },

@@ -32,10 +32,6 @@
     "dataSource": "mongo",
     "public": false
   },
-  "user": {
-    "dataSource": "mongo",
-    "public": true
-  },
   "item": {
     "dataSource": "mongo",
     "public": true

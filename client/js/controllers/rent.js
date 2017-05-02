@@ -1,14 +1,14 @@
 angular
     .module('app')
-    .controller('AllStudentController', ['$scope', 'Students', function ($scope,
-        Students) {
-        $scope.students = Students.find({});
-        console.log($scope.students);
+    .controller('AllRentController', ['$scope', 'Rent', function ($scope,
+        Rent) {
+        $scope.rent = Rent.find({});
+        console.log($scope.rent);
     }])
-    .controller('AddStudentController', ['$scope', 'LoopBackAuth', 'Student',
-        '$state', function ($scope, LoopBackAuth, Student, $state) {
+    .controller('AddStudentController', ['$scope', 'LoopBackAuth', 'Rent',
+        '$state', function ($scope, LoopBackAuth, Rent, $state) {
             $scope.submitForm = function () {
-                Student
+                Rent
                     .create({
                         "firstName": $scope.student.firstName,
                         "lastName": $scope.student.lastName,

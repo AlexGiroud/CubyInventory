@@ -1,8 +1,7 @@
 angular
   .module('app', [
     'ui.router',
-    'lbServices',
-    'config'
+    'lbServices'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
