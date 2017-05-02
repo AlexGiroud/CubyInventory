@@ -14,6 +14,7 @@ angular
       })
       .state('add-item', {
         url: '/add-item',
+        templateUrl: 'views/add-item',
         controller: 'AddItemController',
         authenticate: true
       })
@@ -29,7 +30,7 @@ angular
       })
       .state('add-student', {
         url: '/add-student',
-        templateUrl: 'views/all-images.html',
+        templateUrl: 'views/add-student.html',
         controller: 'AddStudentController'
       })
       .state('delete-student', {
@@ -39,7 +40,7 @@ angular
       })
       .state('add-student-deposit', {
         url: '/add-student-deposit',
-        templateUrl: 'views/all-images.html',
+        templateUrl: 'views/add-student-deposit.html',
         controller: 'AddStudentDepositController'
       })
       .state('forbidden', {
@@ -57,7 +58,7 @@ angular
       })
       .state('add-rent', {
         url: '/add-rent',
-        templateUrl: 'views/my-images.html',
+        templateUrl: 'views/add-rent.html',
         controller: 'AddRentController',
         authenticate: true
       })
