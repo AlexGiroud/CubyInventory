@@ -1,9 +1,9 @@
 angular
     .module('app')
     .controller('AllStudentController', ['$scope', 'Student', function ($scope,
-        Students) {
-        $scope.students = Students.find({});
-        console.log($scope.students);
+        Student) {
+        $scope.student = Student.find({});
+        console.log($scope.student);
     }])
     .controller('AddStudentController', ['$scope', 'LoopBackAuth', 'Student',
         '$state', function ($scope, LoopBackAuth, Student, $state) {
@@ -31,5 +31,14 @@ angular
         }])
     .controller('AddStudentDepositController', ['$scope', 'Student', 'Deposit', '$state',
         '$stateParams', function ($scope, Student, Deposit, $state, $stateParams) {
-            //TODO logique
+            Deposit
+                .create({
+                    "amount": $scope.amount,
+                    "date": $scope.date,
+                    "studentId": $stateParams.id
+                }).$promise
+                .then(function () {
+                    $state.go('all-student');
+                });
+
         }]);

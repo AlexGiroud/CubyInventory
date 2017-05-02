@@ -5,8 +5,9 @@ angular
         $scope.rent = Rent.find({});
         console.log($scope.rent);
     }])
-    .controller('AddStudentController', ['$scope', 'LoopBackAuth', 'Rent',
-        '$state', function ($scope, LoopBackAuth, Rent, $state) {
+    .controller('AddRentController', ['$scope', 'LoopBackAuth', 'Student', 'Rent',
+        '$state', function ($scope, LoopBackAuth, Student, Rent, $state) {
+            $scope.students = 
             $scope.submitForm = function () {
                 Rent
                     .create({
@@ -20,16 +21,14 @@ angular
                     });
             };
         }])
-    .controller('DeleteStudentController', ['$scope', 'Student', '$state',
+    .controller('ReturnRentItemController', ['$scope', 'Rent', '$state',
         '$stateParams', function ($scope, Student, $state, $stateParams) {
-            Student
-                .deleteById({ id: $stateParams.id })
+            Rent
+                .findById({ id: $stateParams.rentid })
                 .$promise
-                .then(function () {
-                    $state.go('all-student');
+                .then(function (data) {
+                    console.log(data);
+                    //TODO change end date
+                    //$state.go('all-student');
                 });
-        }])
-    .controller('AddStudentDepositController', ['$scope', 'Student', 'Deposit', '$state',
-        '$stateParams', function ($scope, Student, Deposit, $state, $stateParams) {
-            //TODO logique
         }]);

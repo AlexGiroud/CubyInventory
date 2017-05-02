@@ -39,7 +39,7 @@ angular
         controller: 'DeleteStudentController'
       })
       .state('add-student-deposit', {
-        url: '/add-student-deposit',
+        url: '/add-student-deposit/:id',
         templateUrl: 'views/add-student-deposit.html',
         controller: 'AddStudentDepositController'
       })
@@ -71,7 +71,7 @@ angular
       .state('return', {
         url: '/return/:rentid',
         templateUrl: 'views/my-images.html',
-        controller: 'RentItemController',
+        controller: 'ReturnRentItemController',
         authenticate: true
       });
     $urlRouterProvider.otherwise('login');
