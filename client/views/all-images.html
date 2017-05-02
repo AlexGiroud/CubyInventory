@@ -1,0 +1,8 @@
+<section>
+  <article ng-repeat="r in images.slice().reverse()">
+    <header>
+      <h1>{{r.date | date}} | {{r.title}}</h1>
+    </header>
+    <img ng-src="./uploads/{{r.fileId}}"/>
+  </article>
+</section>

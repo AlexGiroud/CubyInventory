@@ -1,0 +1,12 @@
+<section>
+  <article ng-repeat="r in images.slice().reverse()">
+    <header>
+      <h1>{{r.date | date}} | {{r.title}}</h1>
+    </header>
+    <img ng-src="./uploads/{{r.fileId}}"/>
+
+    <div class="actions" ng-show="currentUser">
+      <button a ui-sref="delete-image({ id: r.id })">Delete</button>
+    </div>
+  </article>
+</section>
