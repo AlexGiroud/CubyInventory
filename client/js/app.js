@@ -8,7 +8,7 @@ angular
     $stateProvider
       .state('all-items', {
         url: '/all-items',
-        templateUrl: 'views/image-form.html',
+        templateUrl: 'views/all-items.html',
         controller: 'AllItemsController',
         authenticate: true
       })
@@ -24,7 +24,7 @@ angular
       })
       .state('all-student', {
         url: '/all-student',
-        templateUrl: 'views/all-images.html',
+        templateUrl: 'views/all-students.html',
         controller: 'AllStudentController'
       })
       .state('add-student', {
@@ -63,7 +63,7 @@ angular
       })
       .state('all-rent', {
         url: '/all-rent',
-        templateUrl: 'views/my-images.html',
+        templateUrl: 'views/all-rents.html',
         controller: 'AllRentController',
         authenticate: true
       })

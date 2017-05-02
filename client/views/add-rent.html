@@ -1,0 +1,22 @@
+<section>
+  <form name="form" ng-submit="submitForm()">
+    <fieldset>
+      <legend>{{action}} rent</legend>
+      <div class="form-group">
+          <label>start :</label>
+          <input type="date" name="start">
+      </div>
+      <div class="form-group">
+          <select
+            ng-model="selectedStudent"
+            ng-options="s as student.firstName for student in students">
+        </select>
+      </div>
+
+      <div class="actions">
+        <label></label>
+        <button>{{action}} rent</button>
+      </div>
+    </fieldset>
+  </form>
+<section>

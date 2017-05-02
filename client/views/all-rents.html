@@ -1,0 +1,8 @@
+<section>
+  <article ng-repeat="r in rents.slice().reverse()">
+    <header>
+      <h1>{{r.date | date}}</h1>
+    </header>
+    <p>{{r.end | date}}</p>
+  </article>
+</section>

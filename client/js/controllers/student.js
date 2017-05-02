@@ -1,6 +1,6 @@
 angular
     .module('app')
-    .controller('AllStudentController', ['$scope', 'Students', function ($scope,
+    .controller('AllStudentController', ['$scope', 'Student', function ($scope,
         Students) {
         $scope.students = Students.find({});
         console.log($scope.students);
