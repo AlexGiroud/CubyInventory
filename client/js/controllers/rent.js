@@ -7,13 +7,22 @@ angular
     }])
     .controller('AddRentController', ['$scope', 'LoopBackAuth', 'Student', 'Rent',
         '$state', function ($scope, LoopBackAuth, Student, Rent, $state) {
-            $scope.students = 
+            $scope.selectedStudent;
+            $scope.students = [];
+            Student
+                .find()
+                .$promise
+                .then(function (students) {
+                    $scope.students = students;
+                    $scope.selectedStudent = $scope.selectedStudent;
+                });
             $scope.submitForm = function () {
+                //TODO RENT LOGIQUE
+                //console.log($scope.selectedStudent);
                 Rent
                     .create({
-                        "firstName": $scope.student.firstName,
-                        "lastName": $scope.student.lastName,
-                        "formation": $scope.student.formation
+                        "start": $scope.rent.start,
+                        "studentId": $scope.selectedStudent
                     })
                     .$promise
                     .then(function () {

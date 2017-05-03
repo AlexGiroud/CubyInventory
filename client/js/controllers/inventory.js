@@ -1,8 +1,8 @@
 angular
   .module('app')
-  .controller('AllItemsController', ['$scope', 'Items', function ($scope,
-    Items) {
-    $scope.items = Items.find({});
+  .controller('AllItemsController', ['$scope', 'Item', function ($scope,
+    Item) {
+    $scope.items = Item.find({});
     console.log($scope.items);
   }])
   .controller('AddItemController', ['$scope', 'LoopBackAuth', 'Item',

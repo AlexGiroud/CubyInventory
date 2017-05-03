@@ -1,23 +1,23 @@
 <section>
   <form name="form" ng-submit="submitForm()">
     <fieldset>
-      <legend>{{action}} student</legend>
+      <legend>Add student</legend>
       <div class="form-group">
           <label>firstName :</label>
-          <input type="text" name="firstName">
+          <input type="text" ng-model="student.firstName">
       </div>
       <div class="form-group">
           <label>lastName</label>
-          <input type="text" name="lastName">
+          <input type="text" ng-model="student.lastName">
       </div>
       <div class="form-group">
           <label>formation</label>
-          <input type="text" name="formation">
+          <input type="text" ng-model="student.formation">
       </div>
 
       <div class="actions">
         <label></label>
-        <button>{{action}} student</button>
+        <button>Add student</button>
       </div>
     </fieldset>
   </form>

@@ -11,16 +11,16 @@
       <nav>
         <ul>
           <li ng-show="currentUser">
-            <a ui-sref="all-items" ui-sref-active="active">All Items</a>
+            <a ui-sref="all-items" ui-sref-active="active">All Item</a>
           </li>
           <li ng-show="currentUser">
             <a ui-sref="all-student" ui-sref-active="active">All Student</a>
           </li>
           <li ng-show="currentUser">
-            <a ui-sref="rent" ui-sref-active="active">Rent</a>
+            <a ui-sref="add-rent" ui-sref-active="active">Rent</a>
           </li>
           <li ng-show="currentUser">
-            <a ui-sref="return" ui-sref-active="active">Return</a>
+            <a ui-sref="all-rent" ui-sref-active="active">View rent</a>
           </li>
           <li ng-hide="currentUser">
             <a ui-sref="login" ui-sref-active="active">Log in</a>
@@ -41,6 +41,8 @@
     <script src="js/services/lb-services.js"></script>
     <script src="js/controllers/auth.js"></script>
     <script src="js/controllers/inventory.js"></script>
+    <script src="js/controllers/rent.js"></script>
+    <script src="js/controllers/student.js"></script>
     <script src="js/services/auth.js"></script>
   </body>
 </html>

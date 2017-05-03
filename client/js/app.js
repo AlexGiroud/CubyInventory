@@ -14,7 +14,7 @@ angular
       })
       .state('add-item', {
         url: '/add-item',
-        templateUrl: 'views/add-item',
+        templateUrl: 'views/add-item.html',
         controller: 'AddItemController',
         authenticate: true
       })
@@ -57,7 +57,7 @@ angular
         controller: 'AuthLogoutController'
       })
       .state('add-rent', {
-        url: '/add-rent',
+        url: '/add-rent/:itemId',
         templateUrl: 'views/add-rent.html',
         controller: 'AddRentController',
         authenticate: true
@@ -70,7 +70,6 @@ angular
       })
       .state('return', {
         url: '/return/:rentid',
-        templateUrl: 'views/my-images.html',
         controller: 'ReturnRentItemController',
         authenticate: true
       });

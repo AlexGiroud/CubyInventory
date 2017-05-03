@@ -8,7 +8,7 @@ angular
   .controller('AuthLoginController', ['$scope', 'AuthService', '$state',
       function($scope, AuthService, $state) {
     $scope.user = {
-      email: 'gerbilledu0138@gmail.com',
+      email: 'alex@alex.fr',
       password: '1234'
     };
 
@@ -30,7 +30,7 @@ angular
             return;
           }
           // or go to the default state after login
-          $state.go('all-images');
+          $state.go('all-items');
         });
     };
   }])

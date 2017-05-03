@@ -1,19 +1,17 @@
 <section>
-  <article ng-repeat="r in students.slice().reverse()">
-    <header>
-      <h1>{{r.username}}</h1>
-    </header>
-    <p>
-        {{r.email}}
-        <div ng-repeat="d in students.deposit">
-            {{d.amount}}
-            {{d.date | date}}
+    <a ui-sref="add-student" ui-sref-active="active">Add Student</a>
+    <article ng-repeat="r in student.slice().reverse()">
+        <header>
+            <h1>{{r.firstName}} {{r.lastName}} - {{r.formation}}</h1>
+        </header>
+         <a ui-sref="add-student-deposit({id:r.id})" ui-sref-active="active">Add Deposit</a>
+        <div ng-repeat="d in r.deposits">
+            <p>{{d.amount}}</p> 
+            <p>{{d.date | date}}</p>
         </div>
-        <div ng-repeat="n in students.rent">
+        <div ng-repeat="n in r.rents" style="color:red">
             <!-- {{n.id}} -->
-            {{n.start |date}}
-            {{n.end | date}}
+            {{n.start |date}} {{n.end | date}}
         </div>
-    </p>
-  </article>
+    </article>
 </section>

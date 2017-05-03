@@ -1,9 +1,24 @@
 angular
     .module('app')
-    .controller('AllStudentController', ['$scope', 'Student', function ($scope,
-        Student) {
-        $scope.student = Student.find({});
-        console.log($scope.student);
+    .controller('AllStudentController', ['$scope', 'Student', 'Deposit', 'Rent', function ($scope,
+        Student, Deposit, Rent) {
+        var Depo = Deposit.find({});
+        var Rent = Rent.find({});
+        var Students = [];
+        Student.find({}).$promise.then(function (data) {
+            data.forEach(function (s) {
+                console.log(s);
+                var student = s;
+                student.deposits = Depo.filter(function (e) {
+                    return e.studentId === s.id;
+                });
+                student.rents = Rent.filter(function (e) {
+                    return e.studentId === s.id;
+                });
+                Students.push(student);
+            })
+        });
+        $scope.student = Students;
     }])
     .controller('AddStudentController', ['$scope', 'LoopBackAuth', 'Student',
         '$state', function ($scope, LoopBackAuth, Student, $state) {
@@ -31,14 +46,16 @@ angular
         }])
     .controller('AddStudentDepositController', ['$scope', 'Student', 'Deposit', '$state',
         '$stateParams', function ($scope, Student, Deposit, $state, $stateParams) {
-            Deposit
-                .create({
-                    "amount": $scope.amount,
-                    "date": $scope.date,
-                    "studentId": $stateParams.id
-                }).$promise
-                .then(function () {
-                    $state.go('all-student');
-                });
+            $scope.submitForm = function () {
+                Deposit
+                    .create({
+                        "amount": $scope.amount,
+                        "date": $scope.date,
+                        "studentId": $stateParams.id
+                    }).$promise
+                    .then(function () {
+                        $state.go('all-student');
+                    });
+            }
 
         }]);
